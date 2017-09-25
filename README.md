@@ -1,4 +1,7 @@
-# Hello-World
-This is my first repository on GitHub!
+# Cumulative-Distribution-Transform
 
-Now I am editing the readme file in the branch, readme-edit! :D
+This is an implementation of our recent paper:
+
+''Park SR, Kolouri S, Kundu S, Rohde GK. The cumulative distribution transform and linear pattern classification. Applied and Computational Harmonic Analysis. 2017 Feb 22.''
+
+The iPython notebook file "CDT_Notebook.ipynb" contains the succinct formulation and demo of the transformation. 
