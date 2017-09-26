@@ -17,41 +17,41 @@ Here we first walk you through the formulation of CDT and then demonstrate its a
 
 ## Formulation
 
-Consider two nonnegative one-dimensional signals $I_0$ and $I$ defined on $X,Y\subset\mathbb{R}$. Without the loss of generality assume that these signals are normalized so that they could be treated as probability density functions (PDFs). Considering $I_0$ to be a pre-determined 'template'/'reference' PDF, and following the definition of the **optimal mass transportation**  for one-dimensional distributions, one can define the optimal transport map, $f:X \rightarrow Y$ using,
+Consider two nonnegative one-dimensional signals <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/88fbd05154e7d6a65883f20e1b18a817.svg?invert_in_darkmode" align=middle width=13.727175pt height=22.38192pt/> and <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/21fd4e8eecd6bdf1a4d3d6bd1fb8d733.svg?invert_in_darkmode" align=middle width=8.4843pt height=22.38192pt/> defined on <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/82289f06c71b94420b624654501ad06e.svg?invert_in_darkmode" align=middle width=68.09187pt height=22.56408pt/>. Without the loss of generality assume that these signals are normalized so that they could be treated as probability density functions (PDFs). Considering <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/88fbd05154e7d6a65883f20e1b18a817.svg?invert_in_darkmode" align=middle width=13.727175pt height=22.38192pt/> to be a pre-determined 'template'/'reference' PDF, and following the definition of the **optimal mass transportation**  for one-dimensional distributions, one can define the optimal transport map, <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/a4fe1ef6edd893e70831c6cf216f5ec3.svg?invert_in_darkmode" align=middle width=76.982895pt height=22.74591pt/> using,
 
 \[ \int_{inf(Y)}^{f(x)} I(\tau) d\tau=\int_{inf(X)}^{x}I_0(\tau)d\tau\]
 
-which uniquely associates $f:X\rightarrow Y$ to the given density $I$.
+which uniquely associates <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/7211ec64117b386a4d281f03e816f84c.svg?invert_in_darkmode" align=middle width=76.982895pt height=22.74591pt/> to the given density <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/21fd4e8eecd6bdf1a4d3d6bd1fb8d733.svg?invert_in_darkmode" align=middle width=8.4843pt height=22.38192pt/>.
 
 ### Forward Transform
-We use this relationship to define the ** Cumulative Distribution Transform (CDT)** of $I$ (denoted as $\hat{I}: X \to \mathbb{R}$), with respect to the reference $I_0$:
+We use this relationship to define the ** Cumulative Distribution Transform (CDT)** of <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/21fd4e8eecd6bdf1a4d3d6bd1fb8d733.svg?invert_in_darkmode" align=middle width=8.4843pt height=22.38192pt/> (denoted as <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/009c5c6e872cda936558aa1391e2980a.svg?invert_in_darkmode" align=middle width=74.39223pt height=31.0563pt/>), with respect to the reference <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/88fbd05154e7d6a65883f20e1b18a817.svg?invert_in_darkmode" align=middle width=13.727175pt height=22.38192pt/>:
 
 \[\hat{I}(x) = \left(  f(x) - x \right) \sqrt{I_0(x)}.\]
 
-For one-dimensional PDFs the transport map $f$ is uniquely defined, and can be calculated from:
+For one-dimensional PDFs the transport map <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/190083ef7a1625fbc75f243cffb9c96d.svg?invert_in_darkmode" align=middle width=9.780705pt height=22.74591pt/> is uniquely defined, and can be calculated from:
 
 \[f(x)=J^{-1}(J_0(x)).\]
 
-where $J_0: X \to [0,1]$ and $J: Y \to [0,1]$ are the corresponding cumulative distribution functions (CDFs) for ${I}_0$ and $I$, that is: $J_0(x) = \int_{\inf(X)}^x I_0(\tau) d\tau$, $J(y) = \int_{\inf(Y)}^y I(\tau) d\tau$. For continuous positive PDFs $I_0$ and $I$, $f$ is a continuous and monotonically increasing function. If $f$ is differentiable, we can rewrite the above equation as:
+where <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/d5678db6a0e35236c7037b64736ccf19.svg?invert_in_darkmode" align=middle width=103.26822pt height=24.56553pt/> and <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/066ab7381e7d650225f1730bd6a691a7.svg?invert_in_darkmode" align=middle width=95.777715pt height=24.56553pt/> are the corresponding cumulative distribution functions (CDFs) for <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/3ee98a0ddf705fc4e453f42e3e2563c6.svg?invert_in_darkmode" align=middle width=13.727175pt height=22.38192pt/> and <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/21fd4e8eecd6bdf1a4d3d6bd1fb8d733.svg?invert_in_darkmode" align=middle width=8.4843pt height=22.38192pt/>, that is: <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/002d1c8d6f7bd6452b21706524c5b673.svg?invert_in_darkmode" align=middle width=163.540245pt height=28.2282pt/>, <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/88ba2440e8b83e1f8a6db6af4599ea63.svg?invert_in_darkmode" align=middle width=149.80515pt height=28.2282pt/>. For continuous positive PDFs <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/88fbd05154e7d6a65883f20e1b18a817.svg?invert_in_darkmode" align=middle width=13.727175pt height=22.38192pt/> and <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/21fd4e8eecd6bdf1a4d3d6bd1fb8d733.svg?invert_in_darkmode" align=middle width=8.4843pt height=22.38192pt/>, <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/190083ef7a1625fbc75f243cffb9c96d.svg?invert_in_darkmode" align=middle width=9.780705pt height=22.74591pt/> is a continuous and monotonically increasing function. If <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/190083ef7a1625fbc75f243cffb9c96d.svg?invert_in_darkmode" align=middle width=9.780705pt height=22.74591pt/> is differentiable, we can rewrite the above equation as:
 
 \[I_0(x) = f^{\prime}(x) I(f(x)).\]
 
 ### Inverse Transform
 
-The Inverse-CDT of $\hat{I}$ is defined as:
+The Inverse-CDT of <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/bb1509c53ed9e94118cb98cd9436ad7f.svg?invert_in_darkmode" align=middle width=10.163505pt height=31.0563pt/> is defined as:
 \[I(y) = \frac{d }{dy}J_0(f_1^{-1}(y)) = (f_1^{-1})^{\prime} I_0(f^{-1}(y))\]
 
-where $f^{-1}: Y \to X$ refers to the inverse of $f$ (i.e. $f^{-1}(f(x)) = x$), and where $f(x) =  {\hat{I}_1(x)}/{\sqrt{I_0(x)}} + x$. The equation above holds for points where $J_0$ and $f$ are differentiable. By the construction above, $f$ will be differentiable except for points where $I_0$ and $I_1$ are discontinuous. Now we are ready to delve into some exciting applications of CDT.
+where <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/86035f674998337e99cf3bd753ab438f.svg?invert_in_darkmode" align=middle width=94.64004pt height=26.70657pt/> refers to the inverse of <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/190083ef7a1625fbc75f243cffb9c96d.svg?invert_in_darkmode" align=middle width=9.780705pt height=22.74591pt/> (i.e. <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/37634a69c6e56ca1ec7efe3f61465c07.svg?invert_in_darkmode" align=middle width=103.288185pt height=26.70657pt/>), and where <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/db2e04fa41ca5d29f4ff03898514dda5.svg?invert_in_darkmode" align=middle width=181.347045pt height=31.0563pt/>. The equation above holds for points where <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/33799619e6a8adb0933941909e268d50.svg?invert_in_darkmode" align=middle width=15.60933pt height=22.38192pt/> and <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/190083ef7a1625fbc75f243cffb9c96d.svg?invert_in_darkmode" align=middle width=9.780705pt height=22.74591pt/> are differentiable. By the construction above, <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/190083ef7a1625fbc75f243cffb9c96d.svg?invert_in_darkmode" align=middle width=9.780705pt height=22.74591pt/> will be differentiable except for points where <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/88fbd05154e7d6a65883f20e1b18a817.svg?invert_in_darkmode" align=middle width=13.727175pt height=22.38192pt/> and <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/d906cd9791e4b48a3b848558acda5899.svg?invert_in_darkmode" align=middle width=13.727175pt height=22.38192pt/> are discontinuous. Now we are ready to delve into some exciting applications of CDT.
 
 ## CDT Demo
 
-Throughout the experiments in this tutorial we assume that: 1) $X=Y$, and 2) the template PDF is the uniform distribution on $X$. Lets start by showing the nonlinear nature of CDT.
+Throughout the experiments in this tutorial we assume that: 1) <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/fd4304ee3054290b895e68316c23bfb1.svg?invert_in_darkmode" align=middle width=49.874715pt height=22.38192pt/>, and 2) the template PDF is the uniform distribution on <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/cbfb1b2a33b28eab8a3e59464768e810.svg?invert_in_darkmode" align=middle width=14.85297pt height=22.38192pt/>. Lets start by showing the nonlinear nature of CDT.
 
 ### Nonlinearity
 
-Let $I_1$ and $I_2$ be two one-dimensional Gaussian distributions, where:
+Let <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/d906cd9791e4b48a3b848558acda5899.svg?invert_in_darkmode" align=middle width=13.727175pt height=22.38192pt/> and <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/9eff113852463b85a970d2d65d52280c.svg?invert_in_darkmode" align=middle width=13.727175pt height=22.38192pt/> be two one-dimensional Gaussian distributions, where:
 \[I_i(x)= \frac{1}{\sqrt{2\pi\sigma_i^2}}exp({-\frac{|x-\mu_i|^2}{2\sigma_i^2}})\]
-and let $\hat{I}_i$ denotes the corresponding CDTs. The signals and their CDT could for instance be calculated from the code below:
+and let <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/a10ff06f53725bca54c49936f91f5fa5.svg?invert_in_darkmode" align=middle width=11.832645pt height=31.0563pt/> denotes the corresponding CDTs. The signals and their CDT could for instance be calculated from the code below:
 
 ```python
 import numpy as np
@@ -71,9 +71,9 @@ for i in range(2):
 ```
 which results in,
 
-![$I_i$s and their corresponding CDT](Figures/figure1.png)
+![<img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/45de514e4bd2f5ba36f09fff6b549760.svg?invert_in_darkmode" align=middle width=11.832645pt height=22.38192pt/>s and their corresponding CDT](Figures/figure1.png)
 
-Now to demonstrate the nonlinear nature of CDT, we choose the simplest linear operator, which is averaging the two signals. We average the signals in the signal space, $I_3=0.5(I_1+I_2)$, and in the CDT space, $I_4=\text{iCDT}(0.5(\hat{I}_1+\hat{I}_2))$, and compare the results below.
+Now to demonstrate the nonlinear nature of CDT, we choose the simplest linear operator, which is averaging the two signals. We average the signals in the signal space, <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/8a44d333fd9307aaca485044a927c088.svg?invert_in_darkmode" align=middle width=119.29764pt height=24.56553pt/>, and in the CDT space, <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/e7671f5d3f9854cf81eff88849eebd67.svg?invert_in_darkmode" align=middle width=172.956795pt height=31.0563pt/>, and compare the results below.
 
 ```python
 I3=I.mean(axis=0)
@@ -87,7 +87,7 @@ It can be clearly seen that CDT provides a nonlinear averaging for these signals
 
 ### Linear separability
 
-Park et al. (1) showed that CDT can turn certain not linearly separable classes of one-dimensional signals into linearly separable ones. Here we run a toy example to demonstrate this characteristic. We start by defining three classes of signals, where Class $k$, for $k\in\{1,2,3\}$, consists of translated versions of a $k$-modal Gaussian distribution. Here we generate these signal classes and their corresponding CDTs.
+Park et al. (1) showed that CDT can turn certain not linearly separable classes of one-dimensional signals into linearly separable ones. Here we run a toy example to demonstrate this characteristic. We start by defining three classes of signals, where Class <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/63bb9849783d01d91403bc9a5fea12a2.svg?invert_in_darkmode" align=middle width=9.041505pt height=22.74591pt/>, for <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/1cc5019c20e25f4af278b10609f0574a.svg?invert_in_darkmode" align=middle width=84.613815pt height=24.56553pt/>, consists of translated versions of a <img src="https://rawgit.com/skolouri/Cumulative-Distribution-Transform/master/svgs/63bb9849783d01d91403bc9a5fea12a2.svg?invert_in_darkmode" align=middle width=9.041505pt height=22.74591pt/>-modal Gaussian distribution. Here we generate these signal classes and their corresponding CDTs.
 
 ```python
 K=3 # Number of classes
