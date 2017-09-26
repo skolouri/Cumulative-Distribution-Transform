@@ -7,7 +7,7 @@ Cumulative distribution transform (CDT) as described in:
 
 is a nonlinear and invertible transformation for nonnegative one-dimensional signals that guarantees certain linear separation theorems. CDT rises from the rich mathematical foundations of optimal mass transportation, and therefore has a unique geometric interpretation. Unlike the current data extensive nonlinear models, including deep neural networks and their variations, CDT provides a well-defined invertible nonlinear transformation that could be used alongside linear modeling techniques, including principal component analysis, linear discriminant analysis, and support vector machines (SVM), and does not require extensive training data.
 
- The corresponding iPython Notebook file for this post could be find [here](https://github.com/skolouri/Cumulative-Distribution-Transform/blob/master/CDT_Notebook.ipynb). The demo is tested with:
+ The corresponding iPython Notebook file for this post could be find [here](https://github.com/skolouri/Cumulative-Distribution-Transform/blob/master/CDT_Demo.ipynb). The demo is tested with:
 
 1. numpy '1.13.1'
 2. sklearn '0.18.1'
